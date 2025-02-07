@@ -1,22 +1,15 @@
 package com.example.demo.modelos;
 
-import jakarta.persistence.*;
-
-@Entity
-@Table(name = "productos")
-public class Producto {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", columnDefinition = "INT(11)")
-    private int id;  
-
+public class ProductoDTO {
+    private int id;  // Ahora es int en vez de Long
     private String nombre;
     private double precio;
     private String imagen;
 
-    public Producto() {}
+    public ProductoDTO() {}
 
-    public Producto(String nombre, double precio, String imagen) {
+    public ProductoDTO(int id, String nombre, double precio, String imagen) {
+        this.id = id;
         this.nombre = nombre;
         this.precio = precio;
         this.imagen = imagen;
