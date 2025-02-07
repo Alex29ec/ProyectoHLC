@@ -45,6 +45,7 @@ public class UsuarioController {
         }
     
         
+        
 
     // Método para el registro
     @PostMapping("/registro")
